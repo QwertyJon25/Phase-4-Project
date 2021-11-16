@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :equipment
-  resources :exercises
+  resources :exercises, only: [:index, :show]
   resources :user_exercises
   resources :users
   # Routing logic: fallback requests for React Router.
