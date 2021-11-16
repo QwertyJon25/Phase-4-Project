@@ -36,13 +36,17 @@ Exercise.create(name: "Jogging", image: "https://static.toiimg.com/photo/7253252
 
 Exercise.create(name: "Bicep Curl", image: "https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/10/Female_Dumbells_1296x728-header-1296x728.jpg?w=1155&h=1528", description: "The biceps curl is a highly recognizable weight-training exercise that works the muscles of the upper arm", category: "Strength", equipment_id: Equipment.all.sample.id)
 
-Exercise.create(name: "Standing on one foot", image: "https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/19/10/16/sm00049-introduction-to-balance-exercises.jpg", description: "Standing on one foot promotes balance and strengthens leg muscles.", category: "Balance", equipment_id: Equipment.all.sample.id)
+Exercise.create(name: "Dumbbell Squat", image: "https://media.stack.com/stack-content/uploads/2012/01/10170006/How-To-Dumbbell-Squat.jpg.", description: "The additional weight from a pair of dumbbells increases activation in your posterior chain muscles, like the hamstrings and gluteus maximus. Dumbbell squats also activate the stabilizing muscles around your knees and ankles.", category: "Strength", equipment_id: Equipment.all.sample.id)
 
 Exercise.create(name: "Yoga", image: "https://www.parmarth.org/wp-content/uploads/2015/03/definitions-banner.jpg", description: "Hindu spiritual and ascetic discipline, a part of which, including breath control, simple meditation, and the adoption of specific bodily postures, is widely practiced for health and relaxation.", category: "Flexibility", equipment_id: Equipment.all.sample.id)
 
-Exercise.create(name: "Planking", image: "https://images.livemint.com/img/2021/06/24/1140x641/iStock-1150246541_1624523599761_1624523629472.jpg", description: "Lying in a face down position, palms of the hands are typically touching the sides of the body and the toes are typically touching the ground", category: "Endurance", equipment_id: Equipment.all.sample.id)
+Exercise.create(name: "Planking", image: "https://images.livemint.com/img/2021/06/24/1140x641/iStock-1150246541_1624523599761_1624523629472.jpg", description: "Lying in a face down position, palms of the hands are typically touching the sides of the body and the toes are typically touching the ground", category: "Core", equipment_id: Equipment.all.sample.id)
+
+puts "Creating user exercises..."
+UserExercise.create(user_id: User.all.sample.id , exercise_id: Exercise.all.sample.id)
+UserExercise.create(user_id: User.all.sample.id , exercise_id: Exercise.all.sample.id)
+UserExercise.create(user_id: User.all.sample.id , exercise_id: Exercise.all.sample.id)
+UserExercise.create(user_id: User.all.sample.id , exercise_id: Exercise.all.sample.id)
 
 
-
-
-puts "✅ Done seeding!"
+puts "✅ Done seeding!" 
