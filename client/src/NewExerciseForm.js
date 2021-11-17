@@ -23,7 +23,7 @@ export default function NewExerciseForm({addNewExer}) {
         body: JSON.stringify(newExer)
     } 
 
-    fetch('http://localhost:3000/exercises', options)
+    fetch('/exercises', options)
     .then(resp => resp.json())
     .then(newExer => {
         addNewExer(newExer)
@@ -47,7 +47,7 @@ export default function NewExerciseForm({addNewExer}) {
                 Name: <input value={name} onChange={(e) => setName(e.target.value)} type="text" name="name" placeholder="Name"/><br/>
                 Category: <input value={category} onChange={(e) => setCategory(e.target.value)} type="text" name="age" placeholder="Category"/><br/>
                 Description: <input value={description} onChange={(e) => setDescription(e.target.value)} type="text" name="description" placeholder="Description"/><br/>
-                <button type="submit">Add Doggo!</button>
+                <button type="submit">Add Exercise!</button>
             </form>
         </div>
     );

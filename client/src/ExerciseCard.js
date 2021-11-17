@@ -14,7 +14,7 @@ const { name, category, description, image, id} = exerData;
     const handleUpdate = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:3000/exercises/'+id, {
+        fetch('/exercises/'+id, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify({name: newName, category: newCategory, description: newDescription})
@@ -24,7 +24,7 @@ const { name, category, description, image, id} = exerData;
 }
 
 const deleteHandler = () => {
-    fetch('http://localhost:3000/exercises/'+id, {method: "DELETE"})
+    fetch('/exercises/'+id, {method: "DELETE"})
     .then(() => deleteExer(exerData))
 
 }
@@ -34,9 +34,9 @@ const deleteHandler = () => {
     return (
         <li className="exer-card">
             <img src={image} alt={name} className="exer-card-img"/>
-            <h4>{name}</h4>
-            <h4>{category}</h4>
-            <h4>{description}</h4>
+            <h4>Exercise : {name}</h4>
+            <h4>Category : {category}</h4>
+            <h4>Description : {description}</h4>
             <h4>Equipment: </h4>
             <button onClick={deleteHandler}>Delete Exercise</button>
             <button onClick={() => setShowForm(!showForm)}>Edit Details</button>

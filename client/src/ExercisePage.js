@@ -9,7 +9,7 @@ export default function ExercisePage() {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/exercises')
+        fetch('/exercises')
         .then(resp => resp.json())
         .then(exerData => setExercises(exerData))
     }, [])
