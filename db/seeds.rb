@@ -7,11 +7,11 @@ puts "🌱 Seeding data..."
 
 # Seed your database here
 puts "Creating users..."
-User.create(name: "Mary")
-User.create(name: "Jon")
-User.create(name: "Steven")
-User.create(name: "Susan")
-User.create(name: "Sheena")
+User.create(username: "Mary", password: "password123")
+User.create(username: "Jon",  password: "123password")
+User.create(username: "Steven", password: "123pass")
+User.create(username: "Susan", password: "word123")
+User.create(username: "Sheena", password: "pass123word")
 
 
 puts "Creating equipments..."

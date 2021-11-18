@@ -1,7 +1,10 @@
 import React from 'react'
 import ExerciseCard from "./ExerciseCard"
+import NewExerciseForm from "./NewExerciseForm"
 
-export default function ExerciseContainer({ exercises, updateExer, deleteExer }) {
+
+export default function ExerciseContainer({ exercises, updateExer, deleteExer, setSelectedExercise }) {
+    // const [showDetails, setShowDetails] = useState(false)
     // const [sortBy, setSortBy] = useState("id")
 
     // const sortedExercises = exercises.sort((ExerA, ExerB) => {
@@ -16,15 +19,21 @@ export default function ExerciseContainer({ exercises, updateExer, deleteExer })
     //     }
     //  })
 
-    const exerCards = exercises.map(exerObj => <ExerciseCard deleteExer={deleteExer} updateExer={updateExer} key={exerObj.id} exerData={exerObj}/>)
+    const exerCards = exercises?.map(exerObj => <ExerciseCard deleteExer={deleteExer} updateExer={updateExer} key={exerObj.id} exerData={exerObj} setSelectedExercise={setSelectedExercise}/>)
 
 
     return (
+       
         <div className="exer-container">
             {/* <button onClick={() => setSortBy("id")}>Sort By Default</button>
             <button onClick={() => setSortBy("name")}>Sort By Name</button>
             <button onClick={() => setSortBy("category")}>Sort By Category</button> */}
-            <ul className="cards">{exerCards}</ul>
+             {/* {showDetails !== false? {exerCards} : null } */}
+             <ul className="cards">{exerCards}</ul>
         </div>
+       
     )
 }
+
+
+

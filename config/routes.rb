@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   resources :user_exercises, only: [:index, :show, :create, :destroy]
   resources :users, only: [:index, :show]
 
-  # get "/me", to: "user#show"
-  # post "/signup", to: "user#create"
-  # post "/login", to: "sessions#create"
-  # delete "/logout", to: "sessions#destroy"
+  get "/me", to: "users#show"
+  post "/signup", to: "users#create"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
 
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

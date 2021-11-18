@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
-export default function ExerciseCard({ exerData, updateExer, deleteExer }) {
 
-const { name, category, description, image, id} = exerData;
+export default function ExerciseCard({ exerData, updateExer, deleteExer, setSelectedExercise }) {
+
+const { name, image, id} = exerData;
 
     const [newName, setNewName] = useState("")
     const [newCategory, setNewCategory] = useState("")
@@ -29,14 +30,20 @@ const deleteHandler = () => {
 
 }
 
+// const addFavorite= () => {
+//     console.log(id)
+//     const user_id = 11  
 
+// }
 
     return (
-        <li className="exer-card">
+        
+        <div onClick={() => setSelectedExercise(exerData)} className="exer-card">
             <img src={image} alt={name} className="exer-card-img"/>
             <h4>Exercise : {name}</h4>
-            <h4>Category : {category}</h4>
-            <h4>Description : {description}</h4>
+            {/* <h4>Category : {category}</h4>
+            <h4>Description : {description}</h4> */}
+            {/* <button onClick={addFavorite}>Favorite</button> */}
             <h4>Equipment: </h4>
             <button onClick={deleteHandler}>Delete Exercise</button>
             <button onClick={() => setShowForm(!showForm)}>Edit Details</button>
@@ -46,6 +53,9 @@ const deleteHandler = () => {
                 New Description: <input onChange={(e) => setNewDescription(e.target.value)} value={newDescription} placeholder="input new description" name="description" type="text" />
                 <input type="submit" />
             </form>: null}
-        </li>
+        </div>
+     
     );
 }
+
+
