@@ -33,7 +33,7 @@ function Login({ setCurrentUser }) {
   return (
     <div className="authForm">
     
-      <form onSubmit={handleSubmit}>
+      <form className="auth-form" onSubmit={handleSubmit}>
         <h1>Log In</h1>
         <p>
           <label 

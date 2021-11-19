@@ -34,3 +34,33 @@ img {
 .container {
   justify-content: center 
 }
+
+header {
+  background-color: #24E3CD;
+}
+
+h3 {
+  color: #24BDCD;
+}
+
+h1 {
+  color: #24BDCD;
+}
+
+label {
+  color: #24E333;
+  background: #287CFD;
+}
+
+.new-exer-form {
+  background-color: #51FACC;
+  /* margin-bottom: 1000px; */
+}
+
+.auth-form {
+  background-color: #24E3CD;
+}
+
+.exer-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(218, 31, 31, 0.685);
+  }
