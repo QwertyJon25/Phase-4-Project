@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 export default function ExerciseCard({ exerData, updateExer, deleteExer, setSelectedExercise }) {
 
-const { name, image, id} = exerData;
+const { name, image, category, description, id} = exerData;
 
     const [newName, setNewName] = useState("")
     const [newCategory, setNewCategory] = useState("")
@@ -41,10 +41,10 @@ const deleteHandler = () => {
         <div onClick={() => setSelectedExercise(exerData)} className="exer-card">
             <img src={image} alt={name} className="exer-card-img"/>
             <h4>Exercise : {name}</h4>
-            {/* <h4>Category : {category}</h4>
-            <h4>Description : {description}</h4> */}
+            <h5>Category : {category}</h5>
+            <h5>Description : {description}</h5>
             {/* <button onClick={addFavorite}>Favorite</button> */}
-            <h4>Equipment: </h4>
+            {/* <h4>Equipment: </h4> */}
             <button onClick={deleteHandler}>Delete Exercise</button>
             <button onClick={() => setShowForm(!showForm)}>Edit Details</button>
             { showForm ? <form onSubmit={handleUpdate}>

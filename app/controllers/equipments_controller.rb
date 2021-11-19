@@ -11,4 +11,20 @@ class EquipmentController < ApplicationController
         else
             render json: { error: "Equipment not found" }, status: :not_found
         end
+
+        # def create
+        #     equipment = Equipment.create(equipment_params)
+        #     if equipment
+        #         render json: equipment, status: :created
+        #     else
+        #         render json: {error}
+        #     end
+        # end
+
+
+        # private
+        # def equipment_params
+        #     params.permit(:name, :image, :description, :category, :equipment_id)
+        # end
+
     end

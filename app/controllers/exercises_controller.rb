@@ -15,12 +15,21 @@ class ExercisesController < ApplicationController
 
     def create
         exercise = Exercise.create(exercise_params)
-        if exercise.valid?
+        if exercise
             render json: exercise, status: :created
         else
-            render json: { errors: exercise.errors.full_messages}, status: :unprocessable_entity
+            render json: { errors: "Not Found"}, status: :not_found
     end
 end
+
+    def update
+        exercise = Exercise.find_by(id: params[:id])
+        if exercise
+            render json: exercise, status: :ok
+        else 
+            render json: { errors: "Not Found"}, status: :not_found
+        end
+    end
 
     def destroy
         exercise = Exercise.find_by(id: params[:id])

@@ -36,9 +36,10 @@ function AuthenticatedApp({ currentUser, setCurrentUser,addNewExer, updateExer,d
         <Route path= "exercises" element={<ExerciseContainer deleteExer={deleteExer} updateExer={updateExer} setSelectedExercise={setSelectedExercise} exercises={exercises} />}/>
         <Route path="exercises/:exerciseId" element=
         {selectedExercise ? <ExerciseDetail selectedExercise={selectedExercise}/> : null}/>
-        <Route path="new" element= {<NewExerciseForm addNewExer={addNewExer}/>}/>
-      {/* <Redirect to="/" />  */}
+        {/* <Route path="exercises" element= {<NewExerciseForm addNewExer={addNewExer}/>}/>
+      {/* <Redirect to="/" />  */}         
      </Routes>
+     <NewExerciseForm addNewExer={addNewExer}/>
     </div>
   );
 }

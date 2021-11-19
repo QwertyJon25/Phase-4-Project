@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   resources :equipments, only:[:index, :show]
-  resources :exercises, only: [:index, :show, :create, :destroy]
+  resources :exercises, only: [:index, :show, :create, :update, :destroy]
   resources :user_exercises, only: [:index, :show, :create, :destroy]
   resources :users, only: [:index, :show]
 

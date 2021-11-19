@@ -13,12 +13,20 @@ function NavBar({ user, setUser, currentUser, handleLogout }) {
   return (
     <header>
       <div>
+      <br></br>
         <NavLink to="/home"></NavLink>
-        <span>Welcome {currentUser.username}!</span>
+        <h3>Welcome {currentUser.username}!</h3>
+       
       </div>
       <div> 
+  
           <NavLink to="/exercises">Exercises</NavLink>
-          <NavLink to="/favorites">Favorites</NavLink>
+          <br></br>
+          <br></br>
+          <NavLink to="/new">Add Exercise</NavLink>
+          <br></br>
+          <br></br>
+          
           <button onClick={handleLogout}>Logout</button>
       
       </div>
